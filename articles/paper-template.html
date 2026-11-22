@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="[Write a concise description of this article.]">
+    <title>[Article Title] | Elektra Desmillienne</title>
+    <link rel="icon" type="image/x-icon" href="../assets/site_favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+    <link href="../css/custom.css" rel="stylesheet">
+    <link href="../css/writings.css" rel="stylesheet">
+</head>
+<body class="article-page">
+    <!-- Navigation: five-link menu consistent across your pages. -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3" aria-label="Main navigation">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand fw-bolder" href="../index.html">Elektra Desmillienne</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNavigation" aria-controls="mainNavigation"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavigation">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                    <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../research.html">Research</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../writings.html" aria-current="page">Writing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header class="article-header">
+            <div class="container px-4 px-lg-5">
+                <div class="article-header__inner">
+                    <a class="article-back-link" href="../writings.html">&larr; Back to all writing</a>
+                    <p class="article-eyebrow">[CATEGORY]</p>
+                    <h1 class="article-title">[Article Title Goes Here]</h1>
+                    <p class="article-deck">[Add a short summary that tells readers what this article explores.]</p>
+                    <div class="article-meta" aria-label="Article details">
+                        <span>[Month Day, Year]</span>
+                        <span aria-hidden="true">·</span>
+                        <span>[X] min read</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Optional hero image: replace the commented example with your image. -->
+        <!--
+        <figure class="article-hero container px-4 px-lg-5">
+            <img src="../assets/writing/[article-image].webp"
+                 alt="[Describe the image for readers using a screen reader.]"
+                 width="1600" height="900" fetchpriority="high">
+            <figcaption>[Optional image caption or credit.]</figcaption>
+        </figure>
+        -->
+
+        <article class="article-content container px-4 px-lg-5">
+            <div class="article-prose">
+                <p class="article-lead">[Use this opening paragraph to introduce the question, experience, or idea behind your article.]</p>
+
+                <h2>[First section heading]</h2>
+                <p>[Write the first section here. Replace this guidance with your own observations, context, and supporting details.]</p>
+                <p>[Add another paragraph where it helps the reader follow your reasoning.]</p>
+
+                <!-- Optional figure: duplicate this block when an image supports the article. -->
+                <!--
+                <figure class="article-figure">
+                    <img src="../assets/writing/[figure-image].webp"
+                         alt="[Meaningful description of the image.]"
+                         width="1200" height="750" loading="lazy" decoding="async">
+                    <figcaption>[Optional caption or source credit.]</figcaption>
+                </figure>
+                -->
+
+                <h2>[Second section heading]</h2>
+                <p>[Continue with the next part of your article.]</p>
+
+                <!-- Optional quotation: identify the source and get permission when needed. -->
+                <blockquote class="article-quote">
+                    <p>“[Insert a short quotation that supports the point you are making.]”</p>
+                    <cite>[Attribution or source]</cite>
+                </blockquote>
+
+                <h2>[Closing section heading]</h2>
+                <p>[Summarize what you learned, what remains uncertain, or what you plan to explore next.]</p>
+            </div>
+
+            <div class="article-content__footer">
+                <a class="article-back-link" href="../writings.html">&larr; Back to all writing</a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="article-site-footer">
+        <div class="container px-4 px-lg-5 article-site-footer__inner">
+            <p class="mb-0">&copy; <span id="copyrightYear"></span> [Your Name]</p>
+            <nav aria-label="Footer links">
+                <a href="[LinkedIn profile URL]">LinkedIn</a>
+                <a href="[GitHub profile URL]">GitHub</a>
+                <a href="../contact.html">Contact</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Bootstrap bundle is part of the Start Bootstrap template. -->
+    <script src="../js/scripts.js"></script>
+    <script>
+        document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

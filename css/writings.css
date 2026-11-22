@@ -1,0 +1,341 @@
+/* =========================================================
+   WRITING PAGE
+   Loaded AFTER css/styles.css and css/custom.css.
+   All page-specific styles are scoped to .writing-page.
+   ========================================================= */
+
+.writing-page {
+    --writing-ink: var(--color-navy, #18324A);
+    --writing-muted: var(--color-text-muted, #66727C);
+    --writing-accent: var(--color-accent, #A76D43);
+    --writing-border: var(--color-border, #D9D8D3);
+    --writing-surface: var(--color-surface, #FFFFFF);
+    background: var(--color-background, #F8F7F3);
+}
+
+/* Editorial serif is limited to this page's feature headings. */
+.writing-page .writing-hero h1,
+.writing-page .writing-card__title,
+.writing-page .writing-newsletter h2 {
+    font-family: Georgia, Cambria, "Times New Roman", serif;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+}
+
+/* A dark photograph with an overlay, as in the mockup. */
+.writing-page .writing-hero {
+    background-color: #0C2942;
+    background-image:
+        linear-gradient(90deg, rgba(9, 36, 58, 0.98) 0%, rgba(9, 36, 58, 0.91) 45%, rgba(9, 36, 58, 0.55) 100%),
+        url("../assets/writing/writing-hero.webp");
+    background-position: center, center right;
+    background-size: cover;
+    color: #FFFFFF;
+    padding: 0;
+    border-bottom: 1px solid rgba(255,255,255,.13);
+}
+
+.writing-page .writing-hero__inner {
+    display: flex;
+    align-items: center;
+    min-height: 280px;
+    padding-top: 45px;
+    padding-bottom: 47px;
+}
+
+.writing-page .writing-hero__content { max-width: 700px; }
+
+.writing-page .writing-hero h1 {
+    color: #FFFFFF;
+    font-size: clamp(2.35rem, 4vw, 3.55rem);
+    line-height: 1.12;
+    margin: 0 0 18px;
+}
+
+.writing-page .writing-hero p {
+    color: rgba(255,255,255,.88);
+    font-size: clamp(.96rem, 1.32vw, 1.09rem);
+    line-height: 1.6;
+    max-width: 660px;
+    margin: 0;
+}
+
+/* Controls and cards. Narrower top/bottom spacing than global sections. */
+.writing-page .writing-library {
+    padding: 24px 0 64px;
+    background: var(--color-background, #F8F7F3);
+}
+
+.writing-page .writing-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.writing-page .writing-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+}
+
+.writing-page .writing-filter {
+    appearance: none;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--writing-ink);
+    font-family: var(--font-primary, Inter, sans-serif);
+    font-size: .80rem;
+    font-weight: 500;
+    line-height: 1.35;
+    padding: 10px 13px;
+    cursor: pointer;
+    transition: background 180ms ease, color 180ms ease;
+}
+
+.writing-page .writing-filter:hover { background: #E9EBE9; }
+
+.writing-page .writing-filter.is-active {
+    background: var(--writing-ink);
+    color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(24,50,74,.12);
+}
+
+.writing-page .writing-search {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    height: 42px;
+    width: 218px;
+    flex-shrink: 0;
+    border: 1px solid var(--writing-border);
+    border-radius: 12px;
+    background: rgba(255,255,255,.75);
+    padding: 0 12px;
+    color: var(--writing-ink);
+}
+
+.writing-page .writing-search input {
+    background: transparent;
+    border: none;
+    outline: none;
+    min-width: 0;
+    width: 100%;
+    font-size: .84rem;
+    color: var(--writing-ink);
+}
+
+.writing-page .writing-search:focus-within {
+    outline: 2px solid var(--color-industrial-blue, #456C86);
+    outline-offset: 2px;
+}
+
+.writing-page .writing-search input::placeholder { color: #85909A; }
+
+/* 3 columns desktop, 2 tablet, 1 mobile. */
+.writing-page .writing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.writing-page .writing-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    background: var(--writing-surface);
+    border: 1px solid var(--writing-border);
+    border-radius: 11px;
+    box-shadow: 0 2px 10px rgba(24,50,74,.025);
+}
+
+.writing-page .writing-card[hidden] { display: none !important; }
+
+.writing-page .writing-card__image {
+    width: 100%;
+    aspect-ratio: 2.05 / 1;
+    overflow: hidden;
+    background: #C7D0D1;
+}
+
+.writing-page .writing-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.writing-page .writing-card__body {
+    padding: 18px 20px 15px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.writing-page .writing-card__category {
+    margin: 0 0 8px;
+    color: var(--writing-accent);
+    font-family: var(--font-primary, Inter, sans-serif);
+    font-weight: 700;
+    font-size: .67rem;
+    letter-spacing: .115em;
+    text-transform: uppercase;
+}
+
+.writing-page .writing-card__title {
+    color: var(--writing-ink);
+    font-size: clamp(1.10rem, 1.42vw, 1.27rem);
+    line-height: 1.25;
+    margin-bottom: 8px;
+}
+
+.writing-page .writing-card__title a {
+    color: inherit;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.writing-page .writing-card__title a:hover {
+    color: var(--color-accent);
+}
+
+.writing-page .writing-card__summary {
+    color: #43556A;
+    font-family: Georgia, Cambria, "Times New Roman", serif;
+    font-size: .93rem;
+    line-height: 1.48;
+    margin-bottom: 17px;
+}
+
+/* No-results state, visible only when the filter finds no matches. */
+.writing-page .writing-empty {
+    border: 1px dashed var(--writing-border);
+    border-radius: 10px;
+    padding: 32px;
+    margin: 8px 0;
+    text-align: center;
+    color: var(--writing-muted);
+}
+
+.writing-page .writing-empty[hidden] { display: none; }
+
+/* Email section: matching the mockup but intentionally disabled. */
+.writing-page .writing-newsletter {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    min-height: 115px;
+    padding: 22px 28px;
+    margin-top: 26px;
+    border-radius: 13px;
+    background: #F1EFEC;
+}
+
+.writing-page .writing-newsletter__icon {
+    display: grid;
+    place-items: center;
+    width: 53px;
+    height: 53px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #EADFD4;
+    color: #B9662F;
+    font-size: 1.5rem;
+}
+
+.writing-page .writing-newsletter__copy { flex: 1; min-width: 0; }
+
+.writing-page .writing-newsletter h2 {
+    font-size: 1.35rem;
+    color: var(--writing-ink);
+    line-height: 1.2;
+    margin: 0 0 5px;
+}
+
+.writing-page .writing-newsletter p {
+    font-family: Georgia, Cambria, "Times New Roman", serif;
+    color: #45566B;
+    font-size: .92rem;
+    margin: 0;
+}
+
+.writing-page .writing-newsletter__note {
+    display: inline-block;
+    font-size: .71rem;
+    margin-top: 4px;
+    color: var(--writing-muted);
+}
+
+.writing-page .writing-newsletter__form { display: flex; gap: 10px; }
+
+.writing-page .writing-newsletter__form input {
+    border: 1px solid var(--writing-border);
+    border-radius: 10px;
+    background: #FFFFFF;
+    color: var(--writing-ink);
+    padding: 10px 13px;
+    width: 196px;
+    font-size: .83rem;
+}
+
+.writing-page .writing-newsletter__form button {
+    border: 0;
+    border-radius: 10px;
+    padding: 11px 22px;
+    background: var(--writing-ink);
+    color: #FFFFFF;
+    font-family: Georgia, Cambria, "Times New Roman", serif;
+    font-size: .9rem;
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* Visually stay close to the intended form, but communicate no signup. */
+/*.writing-page .writing-newsletter__form :disabled { cursor: not-allowed; opacity: .65; }*/
+
+/* temporarily using form as contact button */
+.writing-page .writing-newsletter__form :enabled
+
+/* Keyboard focus, including filter buttons. */
+.writing-page .writing-filter:focus-visible {
+    outline: 2px solid var(--color-industrial-blue, #456C86);
+    outline-offset: 2px;
+}
+
+@media (max-width: 1199.98px) {
+    .writing-page .writing-toolbar { align-items: flex-start; }
+    .writing-page .writing-search { width: 100%; max-width: 300px; }
+    .writing-page .writing-newsletter { flex-wrap: wrap; }
+    .writing-page .writing-newsletter__form { margin-left: 75px; }
+}
+
+@media (max-width: 859.98px) {
+    .writing-page .writing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .writing-page .writing-hero__inner { min-height: 250px; }
+}
+
+@media (max-width: 575.98px) {
+    .writing-page .writing-hero__inner { min-height: auto; padding-top: 56px; padding-bottom: 56px; }
+    .writing-page .writing-hero h1 { font-size: clamp(2rem, 9vw, 2.7rem); }
+    .writing-page .writing-hero { background-position: center, 75% center; }
+    .writing-page .writing-library { padding-top: 21px; padding-bottom: 45px; }
+    .writing-page .writing-filters { gap: 5px; }
+    .writing-page .writing-filter { padding: 8px 10px; font-size: .76rem; }
+    .writing-page .writing-search { width: 100%; max-width: none; }
+    .writing-page .writing-grid { grid-template-columns: 1fr; gap: 17px; }
+    .writing-page .writing-card__body { padding: 18px; }
+    .writing-page .writing-card__title { font-size: 1.25rem; }
+    .writing-page .writing-newsletter { padding: 22px; gap: 14px; }
+    .writing-page .writing-newsletter__form { width: 100%; margin-left: 0; }
+    .writing-page .writing-newsletter__form input { flex: 1; width: 0; }
+    .writing-page .writing-newsletter__form button { padding-inline: 16px; width: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .writing-page .writing-filter { transition: none; }
+}

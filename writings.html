@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Writing and notes on manufacturing systems, digital transformation, continuous improvement, and what I am learning." />
+    <meta name="author" content="Elektra Desmillienne" />
+    <title>Writing | Elektra Desmillienne</title>
+    <link rel="icon" type="image/x-icon" href="assets/site_favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Your existing Start Bootstrap stylesheet and custom design system. -->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
+    <!-- Writing page overrides always come last. -->
+    <link href="css/writings.css" rel="stylesheet" />
+</head>
+<body class="writing-page d-flex flex-column min-vh-100">
+    <main class="flex-shrink-0">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3" aria-label="Main navigation">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Elektra Desmillienne</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="writings.html" aria-current="page">Writing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Dark editorial hero inspired by your mockup. -->
+        <header class="writing-hero">
+            <div class="container px-4 px-lg-5 writing-hero__inner">
+                <div class="writing-hero__content">
+                    <h1>Exploring ideas for<br class="d-none d-sm-inline" /> better manufacturing systems.</h1>
+                    <p>I write about manufacturing, systems thinking, digital transformation, and the intersection 
+                        of people, process, and technology. This is a space to document what I'm learning, share early 
+                        ideas, and invite feedback.</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Filters and article previews. All examples below are draft placeholders. -->
+        <section class="writing-library" aria-label="Writing library">
+            <div class="container px-4 px-lg-5">
+                <div class="writing-toolbar">
+                    <div class="writing-filters" role="group" aria-label="Filter articles by topic">
+                        <button class="writing-filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+                    <!--    <button class="writing-filter" type="button" data-filter="Manufacturing Systems" aria-pressed="false">Manufacturing Systems</button>-->
+                        <button class="writing-filter" type="button" data-filter="Digital Manufacturing" aria-pressed="false">Digital Manufacturing</button>
+                    <!--    <button class="writing-filter" type="button" data-filter="Continuous Improvement" aria-pressed="false">Continuous Improvement</button>
+                        <button class="writing-filter" type="button" data-filter="Research Notes" aria-pressed="false">Research Notes</button>-->
+                        <button class="writing-filter" type="button" data-filter="Engineering & Learning" aria-pressed="false">Engineering &amp; Learning</button>
+                    </div>
+                    <div class="writing-search">
+                        <label class="visually-hidden" for="writing-search-input">Search articles</label>
+                        <i class="bi bi-search" aria-hidden="true"></i>
+                        <input type="search" id="writing-search-input" placeholder="Search articles..." autocomplete="off" />
+                    </div>
+                </div>
+
+                <div class="writing-grid" id="writing-grid">
+
+                    <!-- CARD 1: Engineeering Masters Education -->
+                    <article class="writing-card" data-category="Engineering &amp; Learning">
+                        <div class="writing-card__image"><img src="assets/writing/masters_learning.webp" width="272" height="132" loading="lazy" alt="Scenic mountain road" /></div>
+                        <div class="writing-card__body">
+                            <p class="writing-card__category">Engineering &amp; Learning</p>
+                            <h2 class="writing-card__title">
+                                <a href="articles/engineering_masters_learning.html" >What I am Learning in My Engineering Management Master's Degree</a>
+                            </h2>
+                            <p class="writing-card__summary">Reflections on leadership, engineering judgment, and personal growth.</p>    
+                        </div>
+                    </article>                    
+                    
+                    <!-- CARD 2: Digital Transformation -->
+                    <article class="writing-card" data-category="Digital Manufacturing">
+                        <div class="writing-card__image"><img src="assets/writing/Technology_Capability_Infographic.webp" width="275" height="133" loading="lazy" alt="Manufacturing dashboard displayed on a tablet" /></div>
+                        <div class="writing-card__body">
+                            <p class="writing-card__category">Digital Manufacturing</p>
+                            <h2 class="writing-card__title">
+                                <a href="articles/digital_trans_sys_challenge.html">Beyond Technology: Reframing Digital Transformation as a Systems Challenge</a>
+                            </h2>
+                            <p class="writing-card__summary">Why creating lasting value from digital technology requires more than successful implementation.</p>
+                        </div>
+                    </article>
+<!--
+                    <!-- CARD 3: Digital Transformation Reflections
+                    <article class="writing-card" data-category="Engineering &amp; Learning">
+                        <div class="writing-card__image"><img src="assets/writing/gemba.webp" width="272" height="132" loading="lazy" alt="Scenic mountain road" /></div>
+                        <div class="writing-card__body">
+                            <p class="writing-card__category">Engineering &amp; Learning</p>
+                            <h2 class="writing-card__title">
+                                <a href="articles/engineering_masters_learning.html" >What I am Learning in My Engineering Management Master's Degree</a>
+                            </h2>
+                            <p class="writing-card__summary">Reflections on leadership, engineering judgment, and personal growth.</p>    
+                        </div>
+                    </article>
+                
+                    <!-- CARD 4 
+                    <article class="writing-card" data-category="Manufacturing Systems">
+                        <div class="writing-card__image"><img src="assets/writing/gemba.webp" width="272" height="133" loading="lazy" alt="Manufacturing conveyor on a factory floor" /></div>
+                        <div class="writing-card__body">
+                            <p class="writing-card__category">Manufacturing Systems</p>
+                            <h2 class="writing-card__title">
+                                <a href="articles/paper-template.html">Observations into Improvement Activities</a>
+                            </h2>
+                            <p class="writing-card__summary">A look at how structured problem solving helps connect daily observations to meaningful, sustained improvements.</p>
+                        </div>
+                    </article>
+                    
+                     <!-- The other cards
+                    <!-- CARD 5 
+                    <article class="writing-card" data-category="Continuous Improvement">
+                        <div class="writing-card__image"><img src="assets/writing/gemba.webp" width="274" height="133" loading="lazy" alt="Process-improvement notes arranged on a whiteboard" /></div>
+                        <div class="writing-card__body">
+                            <p class="writing-card__category">Continuous Improvement</p>
+                            <h2 class="writing-card__title">
+                                <a href="articles/paper-template.html">Observations into Improvement Activities</a>
+                            </h2>
+                            <p class="writing-card__summary">A look at how structured problem solving helps connect daily observations to meaningful, sustained improvements.</p>
+                        </div>
+                    </article>
+
+                    <!-- CARD 6 
+                    <article class="writing-card" data-category="Research Notes">
+                        <div class="writing-card__image"><img src="assets/writing/gemba.webp" width="275" height="132" loading="lazy" alt="Notebook with system design sketches" /></div>
+                        <div class="writing-card__body">
+                            <p class="writing-card__category">Research Notes</p>
+                            <h2 class="writing-card__title">
+                                <a href="articles/paper-template.html">Observations into Improvement Activities</a>
+                            </h2>
+                            <p class="writing-card__summary">A look at how structured problem solving helps connect daily observations to meaningful, sustained improvements.</p>
+                        </div>
+                    </article>
+                     -->
+                </div>
+
+                <p id="writing-empty" class="writing-empty" role="status" hidden>No articles match your search. Try another topic or keyword.</p>
+                <p id="writing-count" class="visually-hidden" role="status" aria-live="polite"></p>
+
+                <!-- Newsletter UI change temporarily to Writing Conact Footer -->
+                <aside class="writing-newsletter" aria-labelledby="newsletter-title">
+                    <div class="writing-newsletter__icon"><i class="bi bi-envelope" aria-hidden="true"></i></div>
+                    <div class="writing-newsletter__copy">
+                        <h2 id="newsletter-title">Share Your Thoughts</h2>
+                        <p>Have feedback, a question, or a different perspective?
+                            <br>I'd love to hear from you.</p>
+                <!--        <span class="writing-newsletter__note">Email subscriptions are coming soon.</span>-->
+                    </div>
+                    <div class="writing-newsletter__form" aria-label="Newsletter signup not yet available">
+                <!--    <label class="visually-hidden" for="newsletter-email">Email address</label>
+                        <input id="newsletter-email" type="email" placeholder="Enter your email" disabled />
+                        <button type="button" disabled>Get In Touch</button>
+                        <a href="contact.html" class="writing-newsletter__form button">
+                            Share Feedback
+                        </a>-->
+                        <a class="btn btn-primary projects-cta__button" href="contact.html">Share Feedback <i class="bi bi-arrow-right ms-2" aria-hidden="true"></i></a>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer matches your existing homepage. -->
+    <footer class="bg-white py-4 mt-auto">
+        <div class="container px-4 px-lg-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row gap-3">
+                <div class="col-auto"><div class="small m-0">&copy; 2026 Elektra Desmillienne</div></div>
+                <div class="col-auto small">
+                    <a class="content-link" href="https://www.linkedin.com/in/elektra-desmillienne/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="bi bi-linkedin" aria-hidden="true"></i> LinkedIn</a>
+                    <a class="content-link ms-3" href="https://github.com/ElektraZee" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="bi bi-github" aria-hidden="true"></i> GitHub</a>
+                    <a class="content-link" href="https://www.instagram.com/elektra.desmillienne" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile">
+                    <i class="bi bi-instagram" aria-hidden="true"></i> Instagram
+                </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <!-- Lightweight client-side filtering; no framework or build step needed. -->
+    <script>
+        (() => {
+            const filters = [...document.querySelectorAll('.writing-filter')];
+            const cards = [...document.querySelectorAll('.writing-card')];
+            const input = document.getElementById('writing-search-input');
+            const empty = document.getElementById('writing-empty');
+            const count = document.getElementById('writing-count');
+            let activeCategory = 'all';
+
+            function updateArticles() {
+                const query = input.value.toLocaleLowerCase().trim();
+                let visible = 0;
+                for (const card of cards) {
+                    const categoryMatches = activeCategory === 'all' || card.dataset.category === activeCategory;
+                    const searchMatches = card.textContent.toLocaleLowerCase().includes(query);
+                    card.hidden = !(categoryMatches && searchMatches);
+                    if (!card.hidden) visible++;
+                }
+                empty.hidden = visible !== 0;
+                count.textContent = `${visible} article preview${visible === 1 ? '' : 's'} shown.`;
+            }
+
+            for (const button of filters) {
+                button.addEventListener('click', () => {
+                    activeCategory = button.dataset.filter;
+                    for (const item of filters) {
+                        const selected = item === button;
+                        item.classList.toggle('is-active', selected);
+                        item.setAttribute('aria-pressed', String(selected));
+                    }
+                    updateArticles();
+                });
+            }
+            input.addEventListener('input', updateArticles);
+            updateArticles();
+        })();
+    </script>
+</body>
+</html>
